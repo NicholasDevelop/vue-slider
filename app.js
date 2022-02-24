@@ -28,43 +28,13 @@ const app = new Vue ({
                 text : 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
             }
         ],
-        
+        currentIndex: 0,
     },
     methods: {
 
     }
 })
 
-
-
-
-const slideWrapper = document.querySelector('.slide-wrapper');
-slideWrapper.innerHTML = '';
-const mainItem = document.querySelector('.main-item');
-const photoTitle = document.querySelector('.title');
-const photoDescription = document.querySelector('.subtitle');
-const mainItemImg = document.querySelector('.main-item > img');
-
-
-
-let currentIndex = 0;
-
-slides.forEach( ( {items,title,text} ) => {
-
-    const divElement = document.createElement('div');
-    divElement.classList.add('item');
-    const image = document.createElement('img');
-
-    image.src = items;
-
-    
-    slideWrapper.append(divElement);
-    divElement.append(image);
-
-    slideWrapper.innerHTML + divElement;
-})
-
-const images = [...document.getElementsByClassName('item')];
 
 images[currentIndex].classList.add('active');
 mainItemImg.src = slides[currentIndex].items;
