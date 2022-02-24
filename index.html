@@ -14,18 +14,18 @@
     <div id="app">
 
         <section>
-            <div class="main-item">
-                <img src="" alt="">
+            <div v-for="el in slides" class="main-item">
+                <img  :src="el.items" alt="">
                 <div class="photo-description">
-                    <h2 class="title"></h2>
-                    <h3 class="subtitle"></h3>    
+                    <h2 class="title">{{el.title}}</h2>
+                    <h3 class="subtitle">{{el.text}}</h3>    
                 </div>
             </div>
     
             <div class="slider">
                 <div v-for="el in slides" class="slide-wrapper">
                     <div class="item">
-                        <img :src="{items}" alt="">
+                        <img :src="el.items" alt="">
                     </div>
                 </div>
                 <div class="arrows">

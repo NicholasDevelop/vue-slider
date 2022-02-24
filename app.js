@@ -41,9 +41,6 @@ mainItemImg.src = slides[currentIndex].items;
 photoTitle.innerHTML = slides[currentIndex].title;
 photoDescription.innerHTML = slides[currentIndex].text;
 
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
-
 
 prev.addEventListener('click', function(){
     if( currentIndex > 0 ){
