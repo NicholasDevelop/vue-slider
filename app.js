@@ -31,39 +31,19 @@ const app = new Vue ({
         currentIndex: 0,
     },
     methods: {
-
+        prevFunction: function() {
+            if( currentIndex > 0 ){
+                currentIndex--;
+            }else{
+                currentIndex = slides.length - 1;
+            }
+        },
+        nextFunction: function() {
+            if( currentIndex < slides.length - 1 ){
+                currentIndex++;
+            }else{
+                currentIndex = 0;
+            }
+        }
     }
-})
-
-images[currentIndex].classList.add('active');
-
-
-prev.addEventListener('click', function(){
-    if( currentIndex > 0 ){
-        images[currentIndex].classList.remove('active');
-        currentIndex--;
-        images[currentIndex].classList.add('active');
-    }else{
-        images[currentIndex].classList.remove('active');
-        currentIndex = slides.length - 1;
-        images[currentIndex].classList.add('active');
-    }
-    mainItemImg.src = slides[currentIndex].items;
-    photoTitle.innerHTML = slides[currentIndex].title;
-    photoDescription.innerHTML = slides[currentIndex].text;
-})
-
-next.addEventListener('click', function(){
-    if( currentIndex < slides.length - 1 ){
-        images[currentIndex].classList.remove('active');
-        currentIndex++;
-        images[currentIndex].classList.add('active');
-    }else{
-        images[currentIndex].classList.remove('active');
-        currentIndex = 0;
-        images[currentIndex].classList.add('active');
-    }
-    mainItemImg.src = slides[currentIndex].items;
-    photoTitle.innerHTML = slides[currentIndex].title;
-    photoDescription.innerHTML = slides[currentIndex].text;
 })
