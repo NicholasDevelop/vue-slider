@@ -35,11 +35,7 @@ const app = new Vue ({
     }
 })
 
-
 images[currentIndex].classList.add('active');
-mainItemImg.src = slides[currentIndex].items;
-photoTitle.innerHTML = slides[currentIndex].title;
-photoDescription.innerHTML = slides[currentIndex].text;
 
 
 prev.addEventListener('click', function(){

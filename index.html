@@ -14,7 +14,7 @@
     <div id="app">
 
         <section>
-            <div v-for="el in slides" class="main-item">
+            <div v-for="(el, index) in slides" class="main-item" :class="currentIndex == index ? 'active' : '' ">
                 <img  :src="el.items" alt="">
                 <div class="photo-description">
                     <h2 class="title">{{el.title}}</h2>
@@ -23,11 +23,12 @@
             </div>
     
             <div class="slider">
-                <div v-for="el in slides" class="slide-wrapper">
-                    <div class="item">
+                <div v-for="(el, index) in slides" class="slide-wrapper">
+                    <div class="item" :class="currentIndex == index ? 'active' : '' ">
                         <img :src="el.items" alt="">
                     </div>
                 </div>
+                
                 <div class="arrows">
                     <span class="prev"><i class="fa-solid fa-angle-up"></i></span>
                     <span class="next"><i class="fa-solid fa-angle-down"></i></span>

@@ -18,11 +18,13 @@ section{
 
 .main-item{
     position: relative;
-}
-
-.main-item{
     height: 70vh;
     width: 65vw;
+    display: none;
+}
+
+.main-item.active{
+    display: initial;
 }
 
 .photo-description{
