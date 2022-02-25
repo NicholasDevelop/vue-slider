@@ -25,7 +25,7 @@
             <div class="slider">
                 <div v-for="(el, index) in slides" class="slide-wrapper">
                     <div class="item" :class="currentIndex == index ? 'active' : '' ">
-                        <img :src="el.items" @click="currentIndex = el" alt="">
+                        <img :src="el.items" @click="currentIndex = index" alt="">
                     </div>
                 </div>
                 
