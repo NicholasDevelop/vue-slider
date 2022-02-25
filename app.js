@@ -32,17 +32,17 @@ const app = new Vue ({
     },
     methods: {
         prevFunction: function() {
-            if( currentIndex > 0 ){
-                currentIndex--;
+            if( this.currentIndex > 0 ){
+                this.currentIndex--;
             }else{
-                currentIndex = slides.length - 1;
+                this.currentIndex = this.slides.length - 1;
             }
         },
         nextFunction: function() {
-            if( currentIndex < slides.length - 1 ){
-                currentIndex++;
+            if( this.currentIndex < this.slides.length - 1 ){
+                this.currentIndex++;
             }else{
-                currentIndex = 0;
+                this.currentIndex = 0;
             }
         }
     }
