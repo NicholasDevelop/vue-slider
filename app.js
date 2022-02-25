@@ -29,6 +29,7 @@ const app = new Vue ({
             }
         ],
         currentIndex: 0,
+        clock: undefined,
     },
     methods: {
         prevFunction: function() {
@@ -44,6 +45,15 @@ const app = new Vue ({
             }else{
                 this.currentIndex = 0;
             }
-        }
-    }
+        },
+        stopAutoplay: function () {
+            clearInterval( this.clock );
+        },
+        startAutoplay: function () {
+            this.clock = setInterval( this.nextFunction ,3000 )
+        },
+    },
+    mounted() {
+        this.startAutoplay()
+    },
 })

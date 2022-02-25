@@ -22,7 +22,7 @@
                 </div>
             </div>
     
-            <div class="slider">
+            <div class="slider" @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
                 <div v-for="(el, index) in slides" class="slide-wrapper">
                     <div class="item" :class="currentIndex == index ? 'active' : '' ">
                         <img :src="el.items" @click="currentIndex = index" alt="">
